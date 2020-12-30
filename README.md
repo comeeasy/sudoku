@@ -12,7 +12,8 @@ Sudoku solving program
 >```
 > 3. example
 >
-> ![example_one](./sudoku_example2.JPG)
+> 	![example_one](./sudoku_example2.JPG)
+
 > 4. open python and execute **"sudoku_main.py"**
  		
 
