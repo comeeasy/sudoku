@@ -46,7 +46,6 @@ class sudoku() :
         for row in range(9) :
             for column in range(9) :
                 if self.matrix[row][column].number == 0 :
-                    #print((self.matrix)[row][column].number)
                     return False
         
         # 모든 순회가 종료되었음에도 False를 return 하지 않았으므로
@@ -98,7 +97,6 @@ def get_empty_loc(sdk) :
 def get_candidate(sdk) :
     emptyList = get_empty_loc(sdk)
     
-    #print()
     for loc in emptyList :
         existNumbers = sorted(list(set(three_by_three_matrix(sdk, loc.row, loc.column) + 
                            column_list(sdk, loc.column) + 
@@ -106,8 +104,6 @@ def get_candidate(sdk) :
         existNumbers.remove(0)
         
         loc.candidate = [num for num in range(1, 10) if num not in existNumbers]
-        #print('({0}, {1}), candidate: {2}'.format(loc.row, loc.column, loc.candidate))
-    #print()
         
 # 비어있는 loc이 없다면 모두 찼으므로 게임 종료
 def play_sdk(sdk) :
@@ -119,9 +115,6 @@ def play_sdk(sdk) :
     # pop하여 게임을 진행한 뒤 풀 수 없다면 종료, 
     # 스도쿠를 해결하였다면 해결한 스도쿠를 return한다.
     
-    #print('is_fail : {0}\nis_finish : {1}'.format(sdk.is_fail(), sdk.is_finish()))
-    #sdk.print()
-    
     # 게임을 풀 수 없음
     if sdk.is_fail() :
         return None
@@ -131,17 +124,12 @@ def play_sdk(sdk) :
     # 게임을 진행할 수 있다면
     else :
         emptyList = get_empty_loc(sdk.matrix)
-        #print('130 : emptyList : {0}'.format(emptyList))
         
         # 가장 위의 emptyList를 모두 넣어보면서 진행
         topLoc = emptyList[0]
         for candidateNum in topLoc.candidate :
             tmpSdk = deepcopy(sdk)
             tmpSdk.matrix[topLoc.row][topLoc.column].number = candidateNum
-            #print('({0}, {1}) is changed to {2}'.format(topLoc.row, topLoc.column, candidateNum))
-            #print()
-            #tmpSdk.print()
-            
             
             result = play_sdk(tmpSdk)
             if result != None :
