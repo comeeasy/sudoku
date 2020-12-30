@@ -12,9 +12,13 @@ Sudoku solving program
 >```
 > 3. example
 >
-> 	![example_one](./sudoku_example2.JPG)
-
+> 	![input_example](./sudoku_example2.JPG)
+>
 > 4. open python and execute **"sudoku_main.py"**
+>	$ python3 sudoku_main.py
+> 5. result
+>
+>	![result_example](./sudoku_example1.JPG)
  		
 
 
