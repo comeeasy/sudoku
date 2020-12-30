@@ -10,6 +10,7 @@ Sudoku solving program
 >	3. so on..
 >```
 > 3. example
->	![example_one](./sudoku_example1.JPG) 		
+>
+> > ![example_one](./sudoku_example1.JPG) 		
 
 
