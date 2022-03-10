@@ -15,7 +15,9 @@ Sudoku solving program
 > 	![input_example](./example_picture/sudoku_example2.JPG)
 >
 > 4. open python and execute **"sudoku_main.py"**
+> ```python
 >	$ python3 sudoku_main.py
+>	
 > 5. result
 >
 >	![result_example](./example_picture/sudoku_example1.JPG)
